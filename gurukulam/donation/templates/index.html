@@ -3,8 +3,8 @@
 
 <h2> index.html </h2>
 
-<form>
-
+<form method="post">
+    {% csrf_token %}
   <div class="mb-3">
     <label for="name" class="form-label">name</label>
     <input name="name" type="name" class="form-control" id="name" aria-describedby="name">
