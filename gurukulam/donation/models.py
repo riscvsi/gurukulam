@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class Donation(models.Model):
+class DonationGurukulam(models.Model):
     name = models.CharField(max_length=100)
     gothram = models.CharField(max_length=100, default="Nil")
     email = models.CharField(max_length=100)

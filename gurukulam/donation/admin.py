@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Donation
+from .models import DonationGurukulam
 
-admin.site.register(Donation)
+admin.site.register(DonationGurukulam)
 
