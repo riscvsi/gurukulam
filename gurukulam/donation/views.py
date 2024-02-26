@@ -11,7 +11,7 @@ def home(request):
         email = request.POST.get("email")
         print(name)
         print(ammount)
-        client = razorpay.Client(auth=("rzp_test_NqMTyxGPRznNqZ","q5lpOYcSqvHq48MdyI610EOk")
+        client = razorpay.Client(auth=("rzp_test_NqMTyxGPRznNqZ","q5lpOYcSqvHq48MdyI610EOk"))
         payment = client.order.create({'ammount': ammount, 'currency': "INR","payment_capture": '1'})
         donateGurukul = DonationGurukulam(name=name, ammount = ammount, email = email, payment_id = payment['id'])
         print(payment)
