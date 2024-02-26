@@ -7,7 +7,7 @@ from .models import DonationGurukulam
 def home(request):
     if request.method == "POST":
         name = request.POST.get("name")
-        ammount = request.POST.get("ammount")
+        ammount = int(request.POST.get("ammount"))*100
         email = request.POST.get("email")
         print(name)
         print(ammount)
