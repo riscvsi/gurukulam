@@ -3,6 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 import razorpay
 from .models import DonationGurukulam
+from django.views.decorators.csrf import csrf_exempt
 
 def home(request):
     if request.method == "POST":
@@ -20,6 +21,7 @@ def home(request):
     return render(request, "index.html")
 
 
+@csrf_exempt
 def success(request):
     if request.method == "POST":
         a = request.POST
